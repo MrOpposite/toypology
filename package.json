@@ -4,7 +4,11 @@
   "description": "A project to animate and generate topological animations and images of various shapes defined by mathematical curves and stuff.",
   "main": "index.jsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -p --config webpack.config.prod.js",
+    "build-dev": "webpack -d --config webpack.config.dev.js",
+    "watch": "webpack -d --watch --config webpack.config.dev.js"
+
   },
   "repository": {
     "type": "git",
