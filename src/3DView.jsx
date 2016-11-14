@@ -272,7 +272,7 @@ class ThreeDView extends React.Component {
 
   render () {
     this.renderScene();
-    return <canvas onMouseDown={this.startDrag} onWheel={this.handleZoom} width={this.props.width} height={this.props.height}/>;
+    return <canvas style={{marginLeft:'auto',marginRight:'auto', display: 'block'}} onMouseDown={this.startDrag} onWheel={this.handleZoom} width={this.props.width} height={this.props.height}/>;
   }
 
 }

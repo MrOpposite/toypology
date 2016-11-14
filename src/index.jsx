@@ -31,33 +31,37 @@ class App extends React.Component {
   }
 
   render () {
+    console.log(window.test = document.body);
+    let width = document.body.scrollWidth*0.9|0;
     return (
       <div>
-        <ThreeDView width={window.innerWidth} height={768} xrot={this.state.currentRotX} yrot={this.state.currentRotY} zrot={this.state.currentRotZ}/>
-        <input
-          type="range"
-          value={this.state.currentRotX}
-          max={2*Math.PI}
-          step={2*Math.PI/720}
-          min={0}
-          onInput={this.changeRotX}
-          style={{width: 1024}} />
-        <input
-          type="range"
-          value={this.state.currentRotY}
-          max={2*Math.PI}
-          step={2*Math.PI/720}
-          min={0}
-          onInput={this.changeRotY}
-          style={{width: 1024}} />
-        <input
-          type="range"
-          value={this.state.currentRotZ}
-          max={2*Math.PI}
-          step={2*Math.PI/720}
-          min={0}
-          onInput={this.changeRotZ}
-          style={{width: 1024}} />
+        <ThreeDView width={width} height={768} xrot={this.state.currentRotX} yrot={this.state.currentRotY} zrot={this.state.currentRotZ}/>
+        <div style={{marginLeft:'auto',marginRight:'auto',width:width}}>
+          <input
+            type="range"
+            value={this.state.currentRotX}
+            max={2*Math.PI}
+            step={2*Math.PI/720}
+            min={0}
+            onInput={this.changeRotX}
+            style={{width: '100%'}} />
+          <input
+            type="range"
+            value={this.state.currentRotY}
+            max={2*Math.PI}
+            step={2*Math.PI/720}
+            min={0}
+            onInput={this.changeRotY}
+            style={{width: '100%'}} />
+          <input
+            type="range"
+            value={this.state.currentRotZ}
+            max={2*Math.PI}
+            step={2*Math.PI/720}
+            min={0}
+            onInput={this.changeRotZ}
+            style={{width: '100%'}} />
+        </div>
       </div>
     );
   }
