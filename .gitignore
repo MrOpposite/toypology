@@ -27,7 +27,8 @@ coverage
 build/Release
 
 # Built files
-dist
+public
+build
 
 # Dependency directories
 node_modules
